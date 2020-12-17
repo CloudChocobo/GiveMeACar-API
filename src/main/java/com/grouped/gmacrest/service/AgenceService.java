@@ -10,11 +10,11 @@ import java.util.Optional;
 @Service
 @Transactional
 public interface AgenceService {
-    public List<Agence> listAgences(String search);
-    public Optional<Agence> getAgence(Long id);
-    public Agence insertAgence(Agence agence);
-    public Agence updateAgence(Long id, Agence agence);
-    public void deleteAgence(Long id);
+    List<Agence> listAgences(String search);
+    Optional<Agence> getAgence(Long id);
+    Agence insertAgence(Agence agence);
+    Agence updateAgence(Long id, Agence agence);
+    void deleteAgence(Long id);
 }
 
 

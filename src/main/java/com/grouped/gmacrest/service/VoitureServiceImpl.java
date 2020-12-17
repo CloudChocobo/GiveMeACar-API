@@ -1,19 +1,15 @@
 package com.grouped.gmacrest.service;
 
-import com.grouped.gmacrest.model.Adresse;
 import com.grouped.gmacrest.model.Voiture;
-import com.grouped.gmacrest.repository.AdresseRepository;
 import com.grouped.gmacrest.repository.VoitureRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import javax.sql.DataSource;
 import java.util.List;
 import java.util.Optional;
 
 @Repository
 public class VoitureServiceImpl implements VoitureService {
-    private DataSource datasource;
 
     @Autowired
     private VoitureRepository repository;

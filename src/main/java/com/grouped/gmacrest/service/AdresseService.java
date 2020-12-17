@@ -10,11 +10,11 @@ import java.util.Optional;
 @Service
 @Transactional
 public interface AdresseService {
-    public List<Adresse> listAdresses(String search);
-    public Optional<Adresse> getAdresse(Long id);
-    public Adresse insertAdresse(Adresse adresse);
-    public Adresse updateAdresse(Long id, Adresse adresse);
-    public void deleteAdresse(Long id);
+    List<Adresse> listAdresses(String search);
+    Optional<Adresse> getAdresse(Long id);
+    Adresse insertAdresse(Adresse adresse);
+    Adresse updateAdresse(Long id, Adresse adresse);
+    void deleteAdresse(Long id);
 }
 
 

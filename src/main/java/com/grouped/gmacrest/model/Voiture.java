@@ -3,9 +3,11 @@ package com.grouped.gmacrest.model;
 import com.fasterxml.jackson.annotation.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-public class Voiture {
+@Table(name = "voiture")
+public class Voiture{
 
     @Id
     @Column(name="id")

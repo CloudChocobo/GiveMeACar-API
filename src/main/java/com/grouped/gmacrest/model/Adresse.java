@@ -1,7 +1,6 @@
 package com.grouped.gmacrest.model;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "adresse")
@@ -20,9 +19,6 @@ public class Adresse {
 
     @Column(name="code_postal")
     private String codePostal;
-
-//    @OneToOne(mappedBy = "adresse")
-//    private Agence agence;
 
     public Long getId() {
         return id;
