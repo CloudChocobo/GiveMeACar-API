@@ -15,7 +15,7 @@
 	<description>GiveMeACar Rest API</description>
 
 	<properties>
-		<java.version>1.10</java.version>
+		<java.version>15</java.version>
 	</properties>
 
 	<dependencies>
