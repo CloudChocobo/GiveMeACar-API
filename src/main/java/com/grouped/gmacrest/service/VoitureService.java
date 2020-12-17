@@ -1,6 +1,5 @@
 package com.grouped.gmacrest.service;
 
-import com.grouped.gmacrest.model.Adresse;
 import com.grouped.gmacrest.model.Voiture;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
