@@ -10,9 +10,10 @@ import java.util.Optional;
 @Service
 @Transactional
 public interface RoleService {
-    public List<Role> listRoles();
-    public Optional<Role> getRole(Long id);
-    public Role insertRole(Role role);
-    public Role updateRole(Long id, Role role);
-    public void deleteRole(Long id);
+    List<Role> listRoles();
+    Optional<Role> getRole(Long id);
+    Role insertRole(Role role);
+    Role updateRole(Long id, Role role);
+    void deleteRole(Long id);
+
 }

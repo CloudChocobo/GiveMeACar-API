@@ -38,4 +38,20 @@ public class VoitureController {
     public Voiture postVoiture(@RequestBody Voiture voiture){
         return voitureService.insertVoiture(voiture);
     }
+
+    @DeleteMapping("/voitures/{id}")
+    public void deleteVoiture(@PathVariable(value="id") long id){
+        voitureService.deleteVoiture(id);
+    }
+
+    @PutMapping("/voitures/{id}")
+    public Voiture update(@PathVariable(value="id") long id, Voiture artist) {
+        ResponseEntity<Voiture> optionalVoiture = this.getVoitureById(id);
+        if(optionalVoiture.hasBody()) {
+            System.out.println(optionalVoiture);
+        }
+        return null;
+    }
+
+
 }

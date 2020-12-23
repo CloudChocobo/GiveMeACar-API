@@ -35,4 +35,10 @@ public class LocationController {
     public Location postLocation(@RequestBody Location location){
         return locationService.insertLocation(location);
     }
+
+    @DeleteMapping("/locations/{id}")
+    public void deleteLocation(@PathVariable(value="id") long id){
+        locationService.deleteLocation(id);
+    }
+
 }

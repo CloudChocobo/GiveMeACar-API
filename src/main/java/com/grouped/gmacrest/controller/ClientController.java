@@ -45,5 +45,10 @@ public class ClientController {
     public Client postClient(@RequestBody Client client){
         return clientService.insertClient(client);
     }
+
+    @DeleteMapping("/clients/{id}")
+    public void deleteClient(@PathVariable(value="id") long id){
+        clientService.deleteClient(id);
+    }
 }
 
