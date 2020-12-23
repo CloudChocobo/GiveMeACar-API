@@ -21,7 +21,8 @@ public class AdresseController {
     public List<Adresse> getAdresses() {
         return adresseService.listAdresses("");
     }
-    public ResponseEntity<List<Adresse>> getAdresses(@RequestParam(value="search", defaultValue="") String search) {
+
+    public ResponseEntity<List<Adresse>> getAdresses(@RequestParam(value = "search", defaultValue = "") String search) {
         List<Adresse> listAdresse;
         try {
             listAdresse = adresseService.listAdresses(search);
@@ -32,7 +33,7 @@ public class AdresseController {
     }
 
     @GetMapping("/adresses/{id}")
-    ResponseEntity<Adresse> getAdresseById(@PathVariable(value="id") long id) {
+    ResponseEntity<Adresse> getAdresseById(@PathVariable(value = "id") long id) {
         Optional<Adresse> adresse = adresseService.getAdresse(id);
         if (adresse.isEmpty()) {
             return ResponseEntity.notFound().build();
@@ -41,7 +42,15 @@ public class AdresseController {
     }
 
     @PostMapping("/adresses")
-    public Adresse postAdresse(@RequestBody Adresse adresse){
+    public Adresse postAdresse(@RequestBody Adresse adresse) {
         return adresseService.insertAdresse(adresse);
     }
+
+    @DeleteMapping("/adresses/{id}")
+    public void deleteUser(@PathVariable(value = "id") long id) {
+        adresseService.deleteAdresse(id);
+    }
+
+
+
 }
