@@ -1,15 +1,13 @@
 package com.grouped.gmacrest.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "agence")
+@Data
 public class Agence {
-
     @Id
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)

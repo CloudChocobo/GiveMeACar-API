@@ -16,7 +16,6 @@ public class Adresse {
 
     @Column(name="ville")
     private String ville;
-
     @Column(name="code_postal")
     private String codePostal;
 

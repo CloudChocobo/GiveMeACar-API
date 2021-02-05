@@ -50,7 +50,4 @@ public class AdresseController {
     public void deleteUser(@PathVariable(value = "id") long id) {
         adresseService.deleteAdresse(id);
     }
-
-
-
 }
