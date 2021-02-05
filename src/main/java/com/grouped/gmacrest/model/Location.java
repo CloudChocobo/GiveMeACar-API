@@ -5,13 +5,13 @@ import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
+import lombok.Data;
 
 @Entity
-@Table(name = "location")
+@Data
 public class Location {
 
     @Id
-    @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -34,52 +34,6 @@ public class Location {
     @JsonIdentityReference(alwaysAsId = true)
     private Voiture voiture;
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getDateDebut() {
-        return dateDebut;
-    }
-
-    public void setDateDebut(String dateDebut) {
-        this.dateDebut = dateDebut;
-    }
-
-    public String getFinEstimee() {
-        return finEstimee;
-    }
-
-    public void setFinEstimee(String finEstimee) {
-        this.finEstimee = finEstimee;
-    }
-
-    public String getFinReelle() {
-        return finReelle;
-    }
-
-    public void setFinReelle(String finReelle) {
-        this.finReelle = finReelle;
-    }
-
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
-    }
-
-    public Voiture getVoiture() {
-        return voiture;
-    }
-
-    public void setVoiture(Voiture voiture) {
-        this.voiture = voiture;
-    }
 
 }
