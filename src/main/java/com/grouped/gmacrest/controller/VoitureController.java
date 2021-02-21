@@ -45,7 +45,7 @@ public class VoitureController {
     }
 
     @PutMapping("/voitures/{id}")
-    public Voiture update(@PathVariable(value="id") long id, Voiture artist) {
+    public Voiture update(@PathVariable(value="id") long id, Voiture voiture) {
         ResponseEntity<Voiture> optionalVoiture = this.getVoitureById(id);
         if(optionalVoiture.hasBody()) {
             System.out.println(optionalVoiture);

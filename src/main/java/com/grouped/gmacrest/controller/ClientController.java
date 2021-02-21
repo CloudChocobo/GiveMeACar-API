@@ -22,7 +22,8 @@ public class ClientController {
     public List<Client> getClients() {
         return clientService.listClients("");
     }
-    public ResponseEntity<List<Client>> getClients(@RequestParam(value="search", defaultValue="") String search) {
+
+    public ResponseEntity<List<Client>> getClients(@RequestParam(value = "search", defaultValue = "") String search) {
         List<Client> listClient;
         try {
             listClient = clientService.listClients(search);
@@ -33,7 +34,7 @@ public class ClientController {
     }
 
     @GetMapping("/clients/{id}")
-    ResponseEntity<Client> getClientById(@PathVariable(value="id") long id) {
+    ResponseEntity<Client> getClientById(@PathVariable(value = "id") long id) {
         Optional<Client> client = clientService.getClient(id);
         if (client.isEmpty()) {
             return ResponseEntity.notFound().build();
@@ -42,13 +43,18 @@ public class ClientController {
     }
 
     @PostMapping("/clients")
-    public Client postClient(@RequestBody Client client){
+    public Client postClient(@RequestBody Client client) {
         return clientService.insertClient(client);
     }
 
     @DeleteMapping("/clients/{id}")
-    public void deleteClient(@PathVariable(value="id") long id){
+    public void deleteClient(@PathVariable(value = "id") long id) {
         clientService.deleteClient(id);
+    }
+
+    @PutMapping("/clients/{id}")
+    public void updateClient(@PathVariable(value = "id") long id, Client client) {
+        clientService.updateClient(id, client);
     }
 }
 
