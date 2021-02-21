@@ -27,12 +27,11 @@ public class UserServiceImpl implements UserService {
         return repository.save(user);
     }
     @Override
-    public User updateUser(Long id, User user) {
+    public void updateUser(Long id, User user) {
         Optional<User> optionalUser = this.getUser(id);
         if(optionalUser.isPresent()) {
-            return repository.save(user);
+            repository.save(user);
         }
-        return null;
     }
     @Override
     public void deleteUser(Long id) {
