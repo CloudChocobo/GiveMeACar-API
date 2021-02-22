@@ -6,7 +6,7 @@ API Java Spring Boot développée pour le projet GiveMeACar, dans le cadre de no
 - Noémie Bezzaz
 - Donnat Moussavou
 - Joseph Allain
-- 
+
 Les commits ont été effectués depuis (presque) un seul ordinateur car le développement a été effectué en coopération grâce à l'extension IntelliJ CodeWithMe, cependant les commits sont nommés lorsque l'auteur des modifications n'est pas moi.
 
 ## Documentation
