@@ -2,7 +2,7 @@
 API Java Spring Boot développée pour le projet GiveMeACar, dans le cadre de notre formation Simplon.
 
 **Equipe**
-- Aurélie Hubert
+- Aurélie Huber
 - Noémie Bezzaz
 - Donnat Moussavou
 - Joseph Allain
