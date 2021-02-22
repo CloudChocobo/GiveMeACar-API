@@ -9,6 +9,7 @@ import java.util.Optional;
 
 @Service
 @Transactional
+/*déclarer les méthodes qu'on va utiliser*/
 public interface VoitureService {
     List<Voiture> listVoitures();
     Optional<Voiture> getVoiture(Long id);

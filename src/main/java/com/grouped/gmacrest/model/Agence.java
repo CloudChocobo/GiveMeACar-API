@@ -14,11 +14,11 @@ public class Agence {
     private Long id;
     private String nom;
 
-    @OneToMany(mappedBy = "agence")
+    @OneToMany(mappedBy = "agence") /*cherche dans voiture la clé étrangère, indique le lien entre les 2*/
     @JsonBackReference
     private List<Voiture> voitures;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL) /*synchronise les MAJ des données*/
     @JoinColumn(name = "adresse_id")
     private Adresse adresse;
 }

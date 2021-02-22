@@ -9,12 +9,13 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
+/*met en oeuvre les conventions déclarées dans voitureService*/
 public class VoitureServiceImpl implements VoitureService {
 
     @Autowired
     private VoitureRepository repository;
 
-    @Override
+    @Override /*garde uniquement cette donnée*/
     public List<Voiture> listVoitures() {
         return repository.findAll();
     }

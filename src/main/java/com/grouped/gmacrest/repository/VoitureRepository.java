@@ -10,5 +10,5 @@ import java.util.List;
 
 @Repository
 public interface VoitureRepository extends JpaRepository<Voiture, Long> {
-    List<Voiture> findByAgenceId(Long id);
+    List<Voiture> findByAgenceId(Long id); /*on précise une méthode qui n'existe pas de base*/
 }

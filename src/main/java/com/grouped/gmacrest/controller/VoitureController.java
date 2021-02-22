@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin("*")
-@RestController
+@CrossOrigin("*") /* L'API autorise les requêtes même si les URL sont différentes */
+@RestController /* dit à hibernate que c'est un controller */
 public class VoitureController {
-    @Autowired
+    @Autowired /*permet d'injecter le service en bean (aspect) plutot qu'en simple classe Java*/
     VoitureService voitureService;
 
     @GetMapping("/voitures")
