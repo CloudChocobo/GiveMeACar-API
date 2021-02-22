@@ -6,23 +6,22 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
 
-@Entity
+@Entity /*correspond au nom de la table*/
+/* @table facultatif si la table a le même nom */
 @Table(name = "voiture")
 public class Voiture_old {
 
-    @Id
+    @Id /* indique que c'est une PK*/
+    /* @column facultatif si la colonne dans la bdd a le meme nom, mais on les a tous mis quand même */
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne @JoinColumn(name="agence_id")
+    @ManyToOne @JoinColumn(name="agence_id") /*plusieurs voitures pour 1 agence, indique la FK)
+    /* permet de faire en sorte qu'on ne retourne que l'id de l'agence, pas l'objet complet : */
     @JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class, property="id")
     @JsonIdentityReference(alwaysAsId = true)
     private Agence agence;
-
-    public Long getId() {
-        return id;
-    }
 
     @Column(name="image")
     private String image;
@@ -50,6 +49,12 @@ public class Voiture_old {
 
     @Column(name="statut")
     private String statut;
+
+
+    /* Getters et setters, ce qu'on a pas avec Lombok */
+    public Long getId() {
+        return id;
+    }
 
     public void setId(Long id) {
         this.id = id;
